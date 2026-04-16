@@ -1,0 +1,28 @@
+.TableHeadCellBorder {
+  th {
+    border-right: 0.5px solid black;
+  }
+  th:last-child {
+    border-right: 0px;
+  }
+}
+.TypographyNoHistory {
+  margin-top: 50px !important;
+  gap: 20px;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center;
+  flex-direction: column;
+}
+.TableRowCellInput {
+  color: black;
+  min-height: 10px !important;
+  padding: 2px 5px !important;
+  min-width: 10px !important;
+  font-weight: 900 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 15px !important;
+  height: fit-content !important;
+  width: fit-content !important;
+}

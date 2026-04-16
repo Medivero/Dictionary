@@ -1,0 +1,44 @@
+{
+  "dictionary": [
+    {
+      "name": "Guy",
+      "translate": "Парень",
+      "id": 1759055673644
+    },
+    {
+      "name": "Approve",
+      "translate": "Утвердить",
+      "id": 1759055655707
+    },
+    {
+      "name": "God damn",
+      "id": 1759055089609,
+      "translate": "Черт возьми"
+    },
+    {
+      "name": "Service",
+      "id": 1759055025461,
+      "translate": "Услуга"
+    },
+    {
+      "name": "Well",
+      "id": 1759054778945,
+      "translate": "Хорошо"
+    },
+    {
+      "name": "Got it",
+      "id": 1759054759625,
+      "translate": "Понятно"
+    },
+    {
+      "name": "Bro",
+      "id": 1759054654161,
+      "translate": "Братан"
+    },
+    {
+      "name": "Negotiations",
+      "id": 1759054586242,
+      "translate": "переговоры"
+    }
+  ]
+}
