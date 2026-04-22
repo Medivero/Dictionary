@@ -72,7 +72,7 @@ export const searchWord = async (
 ) => {
   const str = req.params.substring.toLowerCase();
   let tempDictionary = [...db.data.dictionary];
-  if (str === '') {
+  if (!str) {
     return tempDictionary;
   }
   tempDictionary = tempDictionary.filter(

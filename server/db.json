@@ -1,6 +1,11 @@
 {
   "dictionary": [
     {
+      "name": "Wonderful",
+      "translate": "Замечательный",
+      "id": 1776866082833
+    },
+    {
       "name": "Guy",
       "translate": "Парень",
       "id": 1759055673644

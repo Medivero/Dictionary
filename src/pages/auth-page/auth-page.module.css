@@ -1,0 +1,51 @@
+.Auth {
+  max-width: 500px;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.AuthContainer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 0px 50px;
+}
+
+.FormContainer {
+  max-height: 0px;
+  transition: all 1s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  opacity: 0;
+
+  form {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      border-radius: 15px;
+      font-size: 16px;
+      border: 1px rgba(52, 52, 52, 0.242) solid;
+      padding: 10px 10px;
+      background-color: rgba(128, 128, 128, 0.128);
+    }
+
+    div {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.Visible {
+  max-height: 300px;
+  opacity: 1;
+}

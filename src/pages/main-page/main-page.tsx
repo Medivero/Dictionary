@@ -4,8 +4,9 @@ import { Header } from '../../components/Header/Header.js';
 import { SearchComponent } from '../../components/SearchComponent/SearchComponent.js';
 import { TableComponent } from '../../components/Table/TableComponent/TableComponent.js';
 
-export function MainPage() {
+export const MainPage = () => {
   const { width } = useWindowSize();
+
   if (width < 500) {
     return (
       <>
@@ -35,4 +36,4 @@ export function MainPage() {
       </>
     );
   }
-}
+};
