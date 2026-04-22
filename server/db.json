@@ -1,32 +1,22 @@
 {
   "users": [
     {
-      "id": "6bb35c2f-1629-4ca5-a89a-a48f806bd0a7",
-      "username": "mediv4ik",
-      "password": "2d93dc4ce436913a4cdd5b9af1e1f65d:0608ed8f08c26e54318cba1e32bc101584895dadeb862b0cb43dafb9f4567da7ad506c8f6b7fc2551acd19b56a75912a8fe99938b471a896cd8f2b74a78801c6",
-      "created_at": 1776879571708,
-      "updated_at": 1776880633619,
+      "id": "451233a6-5899-41a2-bd0d-060d39e835ba",
+      "username": "artem555",
+      "password": "74ce90c7c777b80ff0c10ba4fab6fa7a:a3e7cdf7df0f1d704f4a4e11c20ce30d8d574d6cb4cee37db3bbb87a888e8c2e6e5fa5f9b92fce1d1fb31438c0e1ba1de9384e476a03d208fb9292313fffb49b",
+      "created_at": 1776881656649,
+      "updated_at": 1776882221122,
       "user_dictionary": [
-        {
-          "word": "Lol",
-          "translate": "Ржу не могу",
-          "created_at": 1776880633619,
-          "updated_at": 1776880633619
-        },
         {
           "word": "Hello",
           "translate": "Привет",
-          "created_at": 1776879589486,
-          "updated_at": 1776879589486
+          "created_at": 1776882221122,
+          "updated_at": 1776882221122
         }
       ],
       "user_activity_dates": [
         {
-          "date": 1776880633619,
-          "updated_word": "Lol"
-        },
-        {
-          "date": 1776879589486,
+          "date": 1776882221122,
           "updated_word": "Hello"
         }
       ]

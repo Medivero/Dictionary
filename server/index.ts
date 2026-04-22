@@ -71,7 +71,7 @@ db.data ||= {
 }
 
 await fastify.register(cors, {
-  origin: 'http://localhost:5173',
+  origin: true,
   methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 });
@@ -79,7 +79,7 @@ await fastify.register(cors, {
 const start = async () => {
   try {
     await registerRoutes(fastify, db);
-    await fastify.listen({ port: 5563 });
+    await fastify.listen({ host: '192.168.3.35', port: 5563 });
     console.log('Fastify running on port 5563');
   } catch (err) {
     fastify.log.error(err);

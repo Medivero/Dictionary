@@ -159,15 +159,6 @@ export function registerAuth(fastify: FastifyInstance, db: Low<IDictionary>) {
     const username = normalizeUsername(request.body?.username ?? '');
     const password = request.body?.password ?? '';
 
-    if (username.length < 3 || username.length > 32) {
-      reply.code(400).send({ message: 'Username must be 3..32 chars' });
-      return;
-    }
-    if (password.length < 8 || password.length > 128) {
-      reply.code(400).send({ message: 'Password must be 8..128 chars' });
-      return;
-    }
-
     if (findUserByUsername(db.data.users, username)) {
       reply.code(409).send({ message: 'User already exists' });
       return;

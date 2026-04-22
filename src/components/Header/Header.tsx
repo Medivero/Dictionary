@@ -61,6 +61,7 @@ export function Header() {
               variant="outlined"
               color="inherit"
               component={Link}
+              style={{ fontSize: '10px' }}
               to="/training"
             >
               Тренировка
@@ -69,6 +70,7 @@ export function Header() {
               size="small"
               variant="outlined"
               color="inherit"
+              style={{ fontSize: '10px' }}
               component={Link}
               to="/activity"
             >

@@ -13,7 +13,18 @@ export const MainPage = () => {
         <main>
           <Header></Header>
           <TableComponent></TableComponent>
-          <SearchComponent></SearchComponent>
+          <div
+            style={{
+              width: '100vw',
+
+              height: '0px',
+              display: 'flex',
+              position: 'relative',
+              justifyContent: 'center',
+            }}
+          >
+            <SearchComponent></SearchComponent>
+          </div>
         </main>
       </>
     );
