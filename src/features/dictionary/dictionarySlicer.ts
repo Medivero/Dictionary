@@ -13,7 +13,7 @@ const initialState: IDictionartyWords = {
   loaded: false,
 };
 
-export const fetchDictionary = createAsyncThunk<IForm[], void>(
+export const fetchDictionary = createAsyncThunk<{ dictionary: IForm[] }, void>(
   'dictionary/fetchDictionary',
   async () => {
     const dictionary = await getDictionaryFromBff();
@@ -63,7 +63,10 @@ export const dictionaryHistorySlice = createSlice({
     builder
       .addCase(
         fetchDictionary.fulfilled,
-        (state: IDictionartyWords, action: PayloadAction<any>) => {
+        (
+          state: IDictionartyWords,
+          action: PayloadAction<{ dictionary: IForm[] }>,
+        ) => {
           state.storage = action.payload.dictionary;
           state.loaded = true;
         },

@@ -14,6 +14,7 @@ import { generateValidationScheme } from '../utils/validationScheme';
 import { AppDispatch } from '../../../app/store';
 import { useEffect } from 'react';
 import translateWordBff from '../../../api/dictionary/translateWordBff';
+
 export function TableRowComponent({
   cellName,
   cellTranslate,

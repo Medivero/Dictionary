@@ -199,9 +199,74 @@ npm run dev
 
 Все маршруты регистрируются с префиксом `api/`.
 
+## Авторизация
+
+Все запросы к словарю (`/api/dictionary*`) требуют bearer-токен.
+
+Переменные окружения (необязательно):
+
+- `AUTH_SECRET` — секрет для подписи токенов (по умолчанию используется dev-значение);
+- `AUTH_TOKEN_TTL_DAYS` — срок жизни токена в днях (по умолчанию `30`).
+
+Токен нужно передавать в заголовке:
+
+```text
+Authorization: Bearer <token>
+```
+
+### Зарегистрироваться
+
+`POST /api/auth/register`
+
+Тело:
+
+```json
+{ "username": "demo", "password": "password123" }
+```
+
+Ответ:
+
+```json
+{ "token": "...", "user": { "id": "...", "username": "demo" } }
+```
+
+### Войти
+
+`POST /api/auth/login`
+
+Тело:
+
+```json
+{ "username": "demo", "password": "password123" }
+```
+
+### Текущий пользователь
+
+`GET /api/auth/me` (требует `Authorization`)
+
+### Выйти
+
+`POST /api/auth/logout` (требует `Authorization`)
+
+### Активность пользователя
+
+`GET /api/activity` (требует `Authorization`)
+
+Ответ:
+
+```json
+{
+  "user_activity_dates": [
+    { "date": 1713250000000, "updated_word": "Hello" }
+  ]
+}
+```
+
 ### Получить словарь
 
 `GET /api/dictionary`
+
+Требует `Authorization: Bearer <token>`.
 
 Пример ответа:
 
@@ -221,6 +286,8 @@ npm run dev
 
 `POST /api/dictionary/add`
 
+Требует `Authorization: Bearer <token>`.
+
 Тело запроса:
 
 ```json
@@ -237,6 +304,8 @@ npm run dev
 
 `PATCH /api/dictionary`
 
+Требует `Authorization: Bearer <token>`.
+
 Тело запроса:
 
 ```json
@@ -251,6 +320,8 @@ npm run dev
 
 `DELETE /api/dictionary/:id`
 
+Требует `Authorization: Bearer <token>`.
+
 Пример:
 
 ```text
@@ -260,6 +331,8 @@ DELETE /api/dictionary/1713250000000
 ### Поиск по подстроке
 
 `GET /api/dictionary/:substring`
+
+Требует `Authorization: Bearer <token>`.
 
 Поиск выполняется одновременно по полям `name` и `translate`, без учета регистра.
 
@@ -285,15 +358,31 @@ GET /api/dictionary/hel
 
 Используется `lowdb` поверх JSON-файла `server/db.json`.
 
-Формат данных:
+Формат данных (словарь хранится внутри пользователя):
 
 ```json
 {
-  "dictionary": [
+  "users": [
     {
-      "id": 1713250000000,
-      "name": "Hello",
-      "translate": "Привет"
+      "id": "uuid",
+      "username": "string",
+      "password": "hash",
+      "created_at": "timestamp",
+      "updated_at": "timestamp",
+      "user_dictionary": [
+        {
+          "word": "string",
+          "translate": "string",
+          "created_at": "timestamp",
+          "updated_at": "timestamp"
+        }
+      ],
+      "user_activity_dates": [
+        {
+          "date": "timestamp",
+          "updated_word": "string"
+        }
+      ]
     }
   ]
 }

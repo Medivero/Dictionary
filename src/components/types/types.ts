@@ -1,4 +1,5 @@
 import { INotifications } from '../../features/notifications/notificationSlicer';
+import { IAuthState } from '../../features/auth/authSlice';
 
 export interface IForm {
   id: number;
@@ -15,4 +16,5 @@ export interface IDictionartyWords {
 export interface IState {
   dictionary: IDictionartyWords;
   notifications: INotifications;
+  auth: IAuthState;
 }

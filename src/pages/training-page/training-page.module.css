@@ -1,0 +1,31 @@
+.Container {
+  padding: 16px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  padding: 16px;
+  height: 70vh;
+  border-radius: 14px;
+}
+
+.Row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.Controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.Meta {
+  color: gray;
+}

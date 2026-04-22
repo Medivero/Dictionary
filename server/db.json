@@ -1,49 +1,35 @@
 {
-  "dictionary": [
+  "users": [
     {
-      "name": "Wonderful",
-      "translate": "Замечательный",
-      "id": 1776866082833
-    },
-    {
-      "name": "Guy",
-      "translate": "Парень",
-      "id": 1759055673644
-    },
-    {
-      "name": "Approve",
-      "translate": "Утвердить",
-      "id": 1759055655707
-    },
-    {
-      "name": "God damn",
-      "id": 1759055089609,
-      "translate": "Черт возьми"
-    },
-    {
-      "name": "Service",
-      "id": 1759055025461,
-      "translate": "Услуга"
-    },
-    {
-      "name": "Well",
-      "id": 1759054778945,
-      "translate": "Хорошо"
-    },
-    {
-      "name": "Got it",
-      "id": 1759054759625,
-      "translate": "Понятно"
-    },
-    {
-      "name": "Bro",
-      "id": 1759054654161,
-      "translate": "Братан"
-    },
-    {
-      "name": "Negotiations",
-      "id": 1759054586242,
-      "translate": "переговоры"
+      "id": "6bb35c2f-1629-4ca5-a89a-a48f806bd0a7",
+      "username": "mediv4ik",
+      "password": "2d93dc4ce436913a4cdd5b9af1e1f65d:0608ed8f08c26e54318cba1e32bc101584895dadeb862b0cb43dafb9f4567da7ad506c8f6b7fc2551acd19b56a75912a8fe99938b471a896cd8f2b74a78801c6",
+      "created_at": 1776879571708,
+      "updated_at": 1776880633619,
+      "user_dictionary": [
+        {
+          "word": "Lol",
+          "translate": "Ржу не могу",
+          "created_at": 1776880633619,
+          "updated_at": 1776880633619
+        },
+        {
+          "word": "Hello",
+          "translate": "Привет",
+          "created_at": 1776879589486,
+          "updated_at": 1776879589486
+        }
+      ],
+      "user_activity_dates": [
+        {
+          "date": 1776880633619,
+          "updated_word": "Lol"
+        },
+        {
+          "date": 1776879589486,
+          "updated_word": "Hello"
+        }
+      ]
     }
   ]
 }

@@ -1,10 +1,9 @@
-import axios from 'axios';
 import { IForm } from '../../components/types';
-import { API_URL } from '../../constants/config';
+import { http } from '../http';
 
 export default async function editWordBff(form: IForm) {
   try {
-    const resp = await axios.patch(API_URL + 'api/dictionary', form);
+    const resp = await http.patch('api/dictionary', form);
     const data = resp.data;
     return data;
   } catch (err) {

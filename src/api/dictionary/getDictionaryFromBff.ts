@@ -1,14 +1,13 @@
-import axios from 'axios';
-import { API_URL } from '../../constants/config';
 import { IForm } from '../../components/types';
+import { http } from '../http';
 
 export default async function getDictionaryFromBff() {
   try {
-    const resp = await axios.get(API_URL + 'api/dictionary');
-    const data: IForm[] = await resp.data;
+    const resp = await http.get('api/dictionary');
+    const data: { dictionary: IForm[] } = await resp.data;
     return data;
   } catch (err) {
     console.log(err);
-    return [];
+    return { dictionary: [] };
   }
 }
